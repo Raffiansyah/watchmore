@@ -1,0 +1,77 @@
+.video-trailer {
+    aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 360px){
+    .img-backdrop {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .header {
+        margin-top: -50px;
+    }
+
+    .poster-path {
+        display: none;
+    }
+
+    .img-cast {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .info-detail h1 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 375px) {
+    .img-backdrop {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .header {
+        margin-top: -50px;
+    }
+
+    .poster-path {
+        display: none;
+    }
+
+    .img-cast {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .info-detail h1 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img-backdrop {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .header {
+        margin-top: -100px;
+    }
+
+    .poster-path {
+        display: block;
+    }
+
+    .img-cast {
+        width: 120px;
+        height: 150px;
+        object-fit: cover;
+    }
+}

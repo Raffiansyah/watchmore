@@ -1,0 +1,96 @@
+@media (min-width: 360px){
+    .overlay{
+        top: 30px;
+        margin-left: 15px;
+    }
+    .overlay h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .overlay p {
+        font-size: 5px;
+    }
+    .overlay .btn-primary {
+        height: 30px;
+        width: 100px;
+        border-radius: 75px;
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 375px){
+    .overlay{
+        top: 15px;
+        margin-left: 15px;
+    }
+    .overlay h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .overlay p {
+        font-size: 9px;
+    }
+    .overlay .btn-primary {
+        height: 30px;
+        width: 100px;
+        border-radius: 75px;
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 667px){
+    .overlay{
+        top: 100px;
+        margin-left: 100px;
+    }
+    .overlay h1 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .overlay p {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 768px){
+    .overlay{
+        top: 100px;
+        margin-left: 50px;
+    }
+    .overlay h1 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .overlay p {
+        font-size: 15px;
+    }
+    .overlay .btn-primary {
+        height: 40px;
+        width: 155px;
+        border-radius: 75px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px){
+    .overlay{
+        top: 150px;
+        margin-left: 50px;
+    }
+    
+    .overlay h1 {
+        font-size: 70px;
+        font-weight: 600;
+    }
+    
+    .overlay p {
+        font-size: 20px;
+    }
+    
+    .overlay .btn-primary {
+        height: 50px;
+        width: 200px;
+        border-radius: 75px;
+        font-size: 20px;
+    }
+}
