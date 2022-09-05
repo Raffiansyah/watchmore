@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import MovieItem from "../../component/MovieItem/MovieITem";
 import { Link } from "react-router-dom";
+import "./movieGrid.css"
 
 function MovieGrid({ url, category, movieType, apiKey, imgUrl }) {
   const [movie, setMovie] = useState([]);
@@ -43,7 +44,7 @@ function MovieGrid({ url, category, movieType, apiKey, imgUrl }) {
         {movie.map(function (movies, i) {
           return (
             <div
-              className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-8 w-50"
+              className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-8 movie-grid mx-auto"
               key={i}
             >
               <Link to={`/movie/${movies.id}`}>

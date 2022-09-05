@@ -1,0 +1,25 @@
+@media (min-width: 360px) {
+    .movie-grid{
+        width: 50%;
+    }    
+}
+@media (min-width: 375px) {
+    .movie-grid{
+        width: 50%;
+    }    
+}
+@media (min-width: 667px) {
+    .movie-grid{
+        width: 16%;
+    }    
+}
+@media (min-width: 768px) {
+    .movie-grid{
+        width: 16%;
+    }    
+}
+@media (min-width: 1024px) {
+    .movie-grid{
+        width: 16%;
+    }    
+}
