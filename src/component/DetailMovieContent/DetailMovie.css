@@ -62,7 +62,7 @@
     }
 
     .header {
-        margin-top: -100px;
+        margin-top: -200px;
     }
 
     .poster-path {
@@ -70,8 +70,8 @@
     }
 
     .img-cast {
-        width: 120px;
-        height: 150px;
+        width: 150px;
+        height: 190px;
         object-fit: cover;
     }
 }

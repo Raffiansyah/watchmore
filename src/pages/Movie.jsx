@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import NavBar from "../component/navbar/NavBar";
-import Footer from "../component/footer/Footer";
+import NavBar from "../component/navbar/index";
+import Footer from "../component/footer/index";
 import apiConfig from "../Api/apiConfig";
 import { category, movieType } from "../Api/category";
-import MovieGrid from "../component/MovieGrid/MovieGrid";
+import MovieGrid from "../component/MovieGrid/index";
 
 
 function Movie() {

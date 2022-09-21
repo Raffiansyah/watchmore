@@ -5,7 +5,7 @@ import { category } from "../../Api/category";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/autoplay";
 import SwiperCore, { Autoplay } from "swiper";
-import "./heroslide.css";
+import "./index.css";
 import { Link } from "react-router-dom";
 
 function HeroSlide() {
@@ -15,7 +15,7 @@ function HeroSlide() {
   useEffect(function () {
     async function getImg() {
       const request = await fetch(
-        `${apiConfig.baseUrl}trending/${category.movie}day?${apiConfig.apiKey}`
+        `${apiConfig.baseUrl}trending/${category.movie}/day?${apiConfig.apiKey}`
       );
       const response = await request.json();
       const IMG = await response.results.slice(0, 10);
@@ -45,7 +45,7 @@ function HeroSlide() {
                 <div className="container row justify-content-around align-items-center overlay position-absolute">
                   <div className="col-8 col-lg-6 col-xl-8 text-white">
                     <h1>{images.title}</h1>
-                    <p>{images.overview}</p>
+                    <p className="overview">{images.overview}</p>
                     <Link to={`/movie/${images.id}`} className="btn btn-primary btn-pr">
                       Watch Trailer
                     </Link>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import apiConfig from "../../Api/apiConfig";
 import Spinner from "react-bootstrap/Spinner";
-import MovieItem from "../MovieItem/MovieITem";
+import MovieItem from "../MovieItem/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ function SimilarMovie({ category, contentType }) {
     function () {
       async function getContent() {
         const request = await fetch(
-          `${apiConfig.baseUrl}${category}${params.id}/similar?${apiConfig.apiKey}`
+          `${apiConfig.baseUrl}${category}/${params.id}/similar?${apiConfig.apiKey}`
         );
         const response = await request.json();
         const content = await response.results;
@@ -30,7 +30,7 @@ function SimilarMovie({ category, contentType }) {
   );
   return (
     <div className="container-fluid py-4">
-      <h1 className="text-white">Similar</h1>
+      <h1 className="text-white">More Movie</h1>
       {loading && <Spinner animation="border" variant="primary" />}
       <Swiper
         grabCursor={true}
@@ -56,9 +56,12 @@ function SimilarMovie({ category, contentType }) {
         {content.map(function (contents) {
           return (
             <SwiperSlide key={contents.id}>
-              <Link to={`/movie/${contents.id}`}>
+              <Link to={`/movie/${contents.id}`} className='nav-link'>
                 <MovieItem
                   img={`${apiConfig.w500Img}${contents.poster_path}`}
+                  title={contents.title}
+                  vote={contents.vote_average}
+                  vote_count={contents.vote_count}
                 />
               </Link>
             </SwiperSlide>

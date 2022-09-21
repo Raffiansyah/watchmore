@@ -12,7 +12,7 @@ function DetailInfo() {
     function () {
       async function getCredits() {
         const request = await fetch(
-          `${apiConfig.baseUrl}${category.movie}${params.id}/credits?${apiConfig.apiKey}`
+          `${apiConfig.baseUrl}${category.movie}/${params.id}/credits?${apiConfig.apiKey}`
         );
         const response = await request.json();
         const credit = response.cast.slice(0, 5);
@@ -28,13 +28,13 @@ function DetailInfo() {
       <h1>Cast</h1>
       {credit.map(function (credits, index) {
         return (
-          <div className="col-xl-1 col-lg-2 col-md-4 col-xs-6" key={index}>
+          <div className="col-xl-2 col-lg-4 col-md-4 col-xs-6" key={index}>
             <img
               src={`${apiConfig.w500Img}${credits.profile_path}`}
               alt={credits.original_name}
               className="img-cast rounded-3"
             />
-            <p>{credits.original_name}</p>
+            <p>{credits.original_name} as {credits.character}</p>
           </div>
         );
       })}

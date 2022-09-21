@@ -2,8 +2,9 @@ import React from "react";
 import "./DetailMovie.css";
 import DetailInfo from "./DetailInfo";
 import DetailTrailer from "./DetailTrailer";
+import { BsFillStarFill } from "react-icons/bs";
 
-function DetailItem({ backdropImg, posterPath, title, genre, overview }) {
+function DetailItem({ backdropImg, posterPath, title, genre, overview,vote, vote_count }) {
   return (
     <>
       <div>
@@ -24,10 +25,19 @@ function DetailItem({ backdropImg, posterPath, title, genre, overview }) {
           </div>
           <div className="col-lg-8 col-sm-12 info-detail">
             <h1>{title}</h1>
-            <h4>{genre}</h4>
-            <p>{overview}</p>
-            <DetailInfo />
+            <h4 className="mt-3">{genre}</h4>
+            <div className="d-flex align-items-center gap-2">
+              <BsFillStarFill color="yellow" />
+              <h4 className="mt-3">
+                {vote} ({vote_count})
+              </h4>
+            </div>
+            <div className="mt-3">
+              <h1>Overview</h1>
+              <p>{overview}</p>
+            </div>
           </div>
+          <DetailInfo />
         </div>
       </div>
       <DetailTrailer />

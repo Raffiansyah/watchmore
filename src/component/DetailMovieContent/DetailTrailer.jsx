@@ -12,7 +12,7 @@ function DetailTrailer() {
     function () {
       async function getVideo() {
         const request = await fetch(
-          `${apiConfig.baseUrl}${category.movie}${params.id}/videos?${apiConfig.apiKey}`
+          `${apiConfig.baseUrl}${category.movie}/${params.id}/videos?${apiConfig.apiKey}`
         );
         const response = await request.json();
         const videos = response.results.reverse().slice(0, 3);

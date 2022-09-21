@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import NavBar from "../component/navbar/NavBar";
-import Footer from "../component/footer/Footer";
-import MovieList from "../component/MovieList/MovieList";
+import NavBar from "../component/navbar/index";
+import Footer from "../component/footer/index";
+import MovieList from "../component/MovieList/index";
 import {
   category,
   movieType,
   movieTitle,
 } from "../Api/category";
-import HeroSlide from "../component/HeroSlide/HeroSlide";
+import HeroSlide from "../component/HeroSlide/index";
 
 function Home() {
   useEffect(function () {

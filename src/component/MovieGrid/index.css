@@ -10,12 +10,12 @@
 }
 @media (min-width: 667px) {
     .movie-grid{
-        width: 16%;
+        width: 30%;
     }    
 }
 @media (min-width: 768px) {
     .movie-grid{
-        width: 16%;
+        width: 25%;
     }    
 }
 @media (min-width: 1024px) {

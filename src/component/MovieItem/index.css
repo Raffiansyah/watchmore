@@ -17,18 +17,18 @@
 }
 @media (min-width: 667px){
     .play-btn{
-        top: 120px;
-        left: 70px; 
+        top: 35%;
+        left: 25%; 
         width: 5rem;
         height: 5rem;
     }
 }
 @media (min-width: 768px){
     .play-btn{
-        top: 50px;
-        left: 25px; 
-        width: 3rem;
-        height: 3rem;
+        top: 35%;
+        left: 25%; 
+        width: 5rem;
+        height: 5rem;
     }    
 }
 @media (min-width: 1024px){
@@ -49,4 +49,8 @@
 }
 .movie-item:hover .image{
     opacity: 30%;
+}
+
+.movie-info h1{
+    font-size: 20px;
 }

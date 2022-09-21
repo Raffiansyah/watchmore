@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import apiConfig from "../Api/apiConfig";
 import { category } from "../Api/category";
-import NavBar from "../component/navbar/NavBar";
-import Footer from "../component/footer/Footer";
+import NavBar from "../component/navbar/index";
+import Footer from "../component/footer/index";
 import DetailHeader from "../component/DetailMovieContent/DetailHeader";
-import SimilarMovie from "../component/SimilarMovie/SimilarMovie";
+import SimilarMovie from "../component/SimilarMovie/index";
 
 function MovieDetail() {
   const params = useParams();
@@ -17,7 +17,7 @@ function MovieDetail() {
     function () {
       async function getMovie() {
         const request = await fetch(
-          `${apiConfig.baseUrl}${category.movie}${params.id}?${apiConfig.apiKey}`
+          `${apiConfig.baseUrl}${category.movie}/${params.id}?${apiConfig.apiKey}`
         );
         const response = await request.json();
         const genres = response.genres.map((genre) => genre.name).join(" | ");
@@ -39,6 +39,8 @@ function MovieDetail() {
         genre={genre}
         overview={movie.overview}
         title={movie.title}
+        vote={movie.vote_average}
+        vote_count={movie.vote_count}
       />
       <SimilarMovie category={category.movie} />
       <Footer />
