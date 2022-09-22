@@ -14,7 +14,9 @@ function MovieITem({ img, title, vote, vote_count }) {
         <h1>{title}</h1>
         <div className="d-flex align-items-center gap-2">
           <BsFillStarFill color="yellow" />
-          <p className="mt-3">{vote} ({vote_count})</p>
+          <p className="mt-3">
+            {vote} ({vote_count})
+          </p>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import { React} from "react";
+import { React } from "react";
 import NavBar from "../component/navbar/index";
 import Footer from "../component/footer/index";
 import SearchMovies from "../component/SearchMovie";
@@ -9,7 +9,12 @@ function SearchMovie() {
   return (
     <>
       <NavBar />
-      <SearchMovies apiKey={apiConfig.apiKey} url={apiConfig.baseUrl} imgUrl={apiConfig.w500Img} category={category.movie}  />
+      <SearchMovies
+        apiKey={apiConfig.apiKey}
+        url={apiConfig.baseUrl}
+        imgUrl={apiConfig.w500Img}
+        category={category.movie}
+      />
       <Footer />
     </>
   );

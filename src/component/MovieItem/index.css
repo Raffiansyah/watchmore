@@ -1,56 +1,56 @@
-@media (min-width: 360px){
-    .play-btn{
-        top: 35%;
-        left: 25%;
-        width: 5rem;
-        height: 5rem;
-    }
+@media (min-width: 360px) {
+  .play-btn {
+    top: 35%;
+    left: 25%;
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
-@media (min-width: 375px){
-    .play-btn{
-        top: 35%;
-        left: 25%; 
-        width: 5rem;
-        height: 5rem;
-    }
+@media (min-width: 375px) {
+  .play-btn {
+    top: 35%;
+    left: 25%;
+    width: 5rem;
+    height: 5rem;
+  }
 }
-@media (min-width: 667px){
-    .play-btn{
-        top: 35%;
-        left: 25%; 
-        width: 5rem;
-        height: 5rem;
-    }
+@media (min-width: 667px) {
+  .play-btn {
+    top: 35%;
+    left: 25%;
+    width: 5rem;
+    height: 5rem;
+  }
 }
-@media (min-width: 768px){
-    .play-btn{
-        top: 35%;
-        left: 25%; 
-        width: 5rem;
-        height: 5rem;
-    }    
+@media (min-width: 768px) {
+  .play-btn {
+    top: 35%;
+    left: 25%;
+    width: 5rem;
+    height: 5rem;
+  }
 }
-@media (min-width: 1024px){
-    .play-btn{
-        top: 35%;
-        left: 30%; 
-        width: 5rem;
-        height: 5rem;
-    }
-}
-
-.play-btn{
-    opacity: 0;
-}
-.movie-item:hover .play-btn{
-    opacity: 1;
-    transition: all ease-in-out 3ms;
-}
-.movie-item:hover .image{
-    opacity: 30%;
+@media (min-width: 1024px) {
+  .play-btn {
+    top: 35%;
+    left: 30%;
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
-.movie-info h1{
-    font-size: 20px;
+.play-btn {
+  opacity: 0;
+}
+.movie-item:hover .play-btn {
+  opacity: 1;
+  transition: all ease-in-out 3ms;
+}
+.movie-item:hover .image {
+  opacity: 30%;
+}
+
+.movie-info h1 {
+  font-size: 20px;
 }

@@ -56,7 +56,7 @@ function SimilarMovie({ category, contentType }) {
         {content.map(function (contents) {
           return (
             <SwiperSlide key={contents.id}>
-              <Link to={`/movie/${contents.id}`} className='nav-link'>
+              <Link to={`/movie/${contents.id}`} className="nav-link">
                 <MovieItem
                   img={`${apiConfig.w500Img}${contents.poster_path}`}
                   title={contents.title}

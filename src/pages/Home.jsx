@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import NavBar from "../component/navbar/index";
 import Footer from "../component/footer/index";
 import MovieList from "../component/MovieList/index";
-import {
-  category,
-  movieType,
-  movieTitle,
-} from "../Api/category";
+import { category, movieType, movieTitle } from "../Api/category";
 import HeroSlide from "../component/HeroSlide/index";
 
 function Home() {

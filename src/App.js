@@ -14,11 +14,11 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='movie' element={<Movie />} />
         <Route path='movie/:id' element={<MovieDetail />} />
         <Route path='catalog/:movieType' element={<Catalog />} />
-        <Route path='search' element={<SearchMovie />} />
+        <Route path='search/:query' element={<SearchMovie />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </div>
