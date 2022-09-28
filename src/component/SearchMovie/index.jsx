@@ -11,7 +11,7 @@ function SearchMovie({ url, category, apiKey, imgUrl }) {
 
   async function loadMore() {
     const request = await fetch(
-      `${url}search/${category}?${apiKey}&query=${params.query}&page=${page}&include_adult=false`
+      `${url}search/${category}?${apiKey}&query=${params.query}&page=${page}`
     );
     const response = await request.json();
     const newMovies = await response.results;
@@ -20,18 +20,19 @@ function SearchMovie({ url, category, apiKey, imgUrl }) {
     setPage(page + 1);
   }
 
-  async function getDiscoverMovie() {
-    const request = await fetch(
-      `${url}search/${category}?${apiKey}&query=${params.query}&page=1&include_adult=false`
-    );
-    const response = await request.json();
-    const movies = await response.results;
-    setMovie(movies);
-  }
+  useEffect(
+    () => {
+      async function getDiscoverMovie() {
+        const request = await fetch(
+          `${url}search/${category}?${apiKey}&query=${params.query}&page=1`
+        );
+        const response = await request.json();
+        const movies = await response.results;
+        setMovie(movies);
+      }
+      getDiscoverMovie()
+    }, [url, category, apiKey, params]);
 
-  useEffect(() => {
-    getDiscoverMovie();
-  });
   return (
     <div className="container-fluid bg-dark py-5">
       <div className="d-flex justify-content-center"></div>

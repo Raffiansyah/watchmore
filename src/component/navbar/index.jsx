@@ -1,12 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsHouseDoor, BsCollectionPlay } from "react-icons/bs";
 import { useState } from "react";
 
 function NavBar() {
-  let navigate = useNavigate();
   const [query, setQuery] = useState("");
+  const navigate = useNavigate()
 
   const onChange = (e) => {
     setQuery(e.target.value);
@@ -14,7 +13,7 @@ function NavBar() {
 
   const search = () => {
     if (query !== "") {
-      navigate(`search/${query}`);
+      navigate(`/search/${query}`)
       setQuery("");
     }
   };
@@ -36,7 +35,7 @@ function NavBar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse pt-3 pb-3" id="navbarNav">
           <ul className="navbar-nav fs-4 ms-auto">
             <li className="nav-item">
               <Link
@@ -61,7 +60,7 @@ function NavBar() {
               placeholder="Search movie.."
               onChange={(e) => onChange(e)}
             />
-            <button className="btn btn-outline-primary">Search</button>
+            <Link to={`/search/${query}`} className="btn btn-outline-primary">Search</Link>
           </form>
         </div>
       </div>
